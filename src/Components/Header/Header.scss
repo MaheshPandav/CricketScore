@@ -1,3 +1,70 @@
-.abc{
-    background-color: red;
+.Main {
+  background-color: #0edb;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  .header {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+    padding: 5px;
+    align-items: center;
+    .image {
+      height: 55px;
+      width: 55px;
+      cursor: pointer;
+    }
+  }
+  .middle-content {
+    width: 60%;
+    .middle-option {
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      .item-text:hover {
+        color: red;
+      }
+    }
+  }
+  .nav-mobile-view {
+    position: fixed;
+    top: 65px;
+    width: 100%;
+    background-color: #10044a;
+    height: 800px;
+    left: 0;
+    transition: 0.7s ease;
+    transform: translateY(-120%);
+    z-index: 99;
+    &.menu-visible {
+      transform: translateY(0%);
+    }
+  }
+  .menu {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .Main {
+    height: 105px;
+    .middle-content {
+      .middle-option {
+        display: none;
+      }
+    }
+    .menu {
+      display: flex;
+    }
+    .search {
+      margin-left: 125px;
+    }
+    .nav-mobile-view {
+      margin-top: 40px;
+    }
+  }
 }
