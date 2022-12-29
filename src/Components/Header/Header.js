@@ -8,13 +8,11 @@ const Header = () => {
   return (
     <div className="Main">
       <div className="header">
-        <div>
-          <img
-            className="image"
-            src="https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/All-Star-Cricket-Team-Logo-Maker-for-Cricket-Teams.png"
-            alt="new"
-          />
-        </div>
+        <img
+          className="image"
+          src="https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/All-Star-Cricket-Team-Logo-Maker-for-Cricket-Teams.png"
+          alt="new"
+        />
         <div className="middle-content">
           <ul className="middle-option">
             <p className="item-text">Live Scores</p>
@@ -29,10 +27,28 @@ const Header = () => {
           </ul>
         </div>
         <div className="search">
-          <BsSearch />
+          <BsSearch color="#fff" size="25" />
         </div>
-        <AiOutlineAlignLeft className="menu" onClick={() => setMemu(!menu)}/>
-        {menu && <div className="nav-mobile-view menu-visible">hello</div>}
+        <AiOutlineAlignLeft
+          color="#fff"
+          className="menu"
+          size="30"
+          onClick={() => setMemu(!menu)}
+        />
+        {menu && (
+          <div className="nav-mobile-view menu-visible">
+            <div className="mobilecontent">
+              <p className="text">Schedule</p>
+              <p className="text">Archives</p>
+              <p className="text">News</p>
+              <p className="text">Series</p>
+              <p className="text">Teams</p>
+              <p className="text">Videos</p>
+              <p className="text">More</p>
+              <p className="text">Rankings</p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
