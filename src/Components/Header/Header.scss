@@ -1,5 +1,6 @@
 .Main {
-  background-color: #121b28;
+  // background-color: #121b28;
+  background-color: #000;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -10,7 +11,7 @@
     flex-direction: row;
     display: flex;
     justify-content: space-between;
-    width: 92%;
+    width: 91%;
     padding: 5px;
     align-items: center;
     .image {

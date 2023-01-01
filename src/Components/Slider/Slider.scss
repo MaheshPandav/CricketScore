@@ -1,0 +1,187 @@
+.slider-container {
+  width: 100%;
+  margin: 0 auto;
+  .slider-box {
+    display: flex;
+    // width: 330px;
+    height: 220px;
+    margin: 15px;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: -1px 1px 16px -1px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+    .top-section {
+      width: 80%;
+      height: 20%;
+      margin: 0 auto;
+      padding-top: 15px;
+      flex-direction: row;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      //   background-color: red;
+      .match-number {
+        color: #000;
+        font-size: 17px;
+      }
+    }
+
+    .preview-view {
+      // background-color: #000;
+      border-width: 1px;
+      border: 1px solid #000;
+      height: 25px;
+      padding: 1px 6px;
+      border-radius: 5px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      .preview-text {
+        color: #000;
+      }
+    }
+    .complated-view {
+      background-color: #000;
+      // border: 1px solid #000;
+      height: 25px;
+      padding: 1px 6px;
+      border-radius: 5px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      .complated-text {
+        color: #fff;
+      }
+    }
+    .live-view {
+      background-color: red;
+      height: 25px;
+      padding: 1px 6px;
+      border-radius: 5px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      .live-text {
+        color: #fff;
+      }
+    }
+    .middle-section {
+      width: 80%;
+      height: 50%;
+      margin: 0 auto;
+      padding-top: 15px;
+      flex-direction: row;
+      justify-content: space-between;
+      display: flex;
+      //  background-color: #eee;
+    }
+    .left-team {
+      .top-view {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+      }
+      .hometeam-logo {
+        height: 25px;
+        width: 40px;
+        border-radius: 5px;
+        margin-right: 5px;
+      }
+      .scored-section-team-a {
+        // background-color: red;
+        margin: 20px auto;
+        color: #000;
+        .over {
+          margin-top: 5px;
+          color: #000;
+        }
+      }
+    }
+    .right-team {
+      .right-section {
+        justify-content: space-between;
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+      }
+      .hometeam-logo {
+        height: 25px;
+        width: 40px;
+        border-radius: 5px;
+        margin-left: 5px;
+      }
+      .scored-section-team-b {
+        // background-color: red;
+        margin: 20px 5px 10px 1px;
+        color: #000;
+        .scored {
+          margin-left: 35px;
+        }
+        .over {
+          margin-top: 5px;
+          color: #000;
+        }
+      }
+    }
+    .preview-section {
+      width: 80%;
+      height: 57%;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      // background-color: red;
+    }
+    .bottom-section {
+      width: 80%;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      background-color: #eee;
+      height: 30px;
+      border-radius: 5px;
+      .result-text {
+        text-align: center;
+        overflow: hidden;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #000;
+      }
+    }
+    .middle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .middle-line {
+        position: absolute;
+        height: 60px;
+        width: 1px;
+        background-color: grey;
+      }
+
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: #000;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        z-index: 1000;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}

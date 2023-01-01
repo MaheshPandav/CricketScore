@@ -19,20 +19,21 @@ const Home = () => {
       inprogress.forEach((fixture) => {
         allMatches.push(fixture);
       });
-      const upcoming = res.data.UpcomingFixtures.filter((match) => {
-        if (match) {
-          return match;
-        }
-      });
-      upcoming.forEach((fixture) => {
-        allMatches.push(fixture);
-      });
+
       const complated = res.data.CompletedFixtures.filter((match) => {
         if (match) {
           return match;
         }
       });
       complated.forEach((fixture) => {
+        allMatches.push(fixture);
+      });
+      const upcoming = res.data.UpcomingFixtures.filter((match) => {
+        if (match) {
+          return match;
+        }
+      });
+      upcoming.forEach((fixture) => {
         allMatches.push(fixture);
       });
       console.log(allMatches);
@@ -45,7 +46,7 @@ const Home = () => {
   }, []);
   return (
     <div className="main-container">
-      <Slider/>
+      <Slider data={match} />
     </div>
   );
 };
