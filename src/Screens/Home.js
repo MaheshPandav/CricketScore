@@ -47,6 +47,17 @@ const Home = () => {
   return (
     <div className="main-container">
       <Slider data={match} />
+      <div className="bottom-section">
+        <div className="first-section">
+        <p>Content</p>
+        </div>
+        <div className="middle-section">
+        <p>Content</p>
+        </div>
+        <div className="last-section">
+        <p>Content</p>
+        </div> 
+      </div>
     </div>
   );
 };

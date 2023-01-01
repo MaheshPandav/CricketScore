@@ -5,9 +5,9 @@
     display: flex;
     // width: 330px;
     height: 220px;
-    margin: 15px;
+    margin: 12px;
     flex-direction: column;
-    background-color: #fff;
+    background-color: whitesmoke;
     border-radius: 20px;
     object-fit: cover;
     box-shadow: -1px 1px 16px -1px rgba(0, 0, 0, 0.2);
@@ -94,6 +94,10 @@
         // background-color: red;
         margin: 20px auto;
         color: #000;
+        .scored {
+          flex-direction: row;
+          display: flex;
+        }
         .over {
           margin-top: 5px;
           color: #000;
@@ -119,6 +123,8 @@
         color: #000;
         .scored {
           margin-left: 35px;
+          flex-direction: row;
+          display: flex;
         }
         .over {
           margin-top: 5px;
@@ -180,6 +186,10 @@
         z-index: 1000;
       }
     }
+  }
+  .slider-box:hover {
+    transform: scale(1.05);
+    transition: all 0.5s;
   }
   a {
     text-decoration: none;

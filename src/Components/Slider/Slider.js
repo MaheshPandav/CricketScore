@@ -105,11 +105,46 @@ export default function Home(props) {
                               : ""
                           }
                         >
-                          <div>
-                            <p>169/5</p>
+                          <div className="scored">
+                            {item.Innings[0] ? (
+                              item.HomeTeam.Id ===
+                              item.Innings[0].BattingTeamId ? (
+                                <p>{item.Innings[0].RunsScored}/</p>
+                              ) : item.Innings[1] ? (
+                                item.HomeTeam.Id ===
+                                  item.Innings[1].BattingTeamId && (
+                                  <p>{item.Innings[1].RunsScored}/</p>
+                                )
+                              ) : (
+                                <p style={{ color: "#aaa" }}>Yet to Bat</p>
+                              )
+                            ) : (
+                              <p>{item.HomeTeam.ShortName}</p>
+                            )}
+                            {item.Innings[0] ? (
+                              item.HomeTeam.Id ===
+                              item.Innings[0].BattingTeamId ? (
+                                <p>{item.Innings[0].NumberOfWicketsFallen}</p>
+                              ) : item.Innings[1] ? (
+                                item.HomeTeam.Id ===
+                                  item.Innings[1].BattingTeamId && (
+                                  <p>{item.Innings[1].NumberOfWicketsFallen}</p>
+                                )
+                              ) : null
+                            ) : null}
                           </div>
                           <div className="over">
-                            <p>Over(19.6)</p>
+                            {item.Innings[0] ? (
+                              item.HomeTeam.Id ===
+                              item.Innings[0].BattingTeamId ? (
+                                <p>{item.Innings[0].OversBowled} overs</p>
+                              ) : item.Innings[1] ? (
+                                item.HomeTeam.Id ===
+                                  item.Innings[1].BattingTeamId && (
+                                  <p>{item.Innings[1].OversBowled} overs</p>
+                                )
+                              ) : null
+                            ) : null}
                           </div>
                         </div>
                       ) : (
@@ -140,11 +175,46 @@ export default function Home(props) {
                               : ""
                           }
                         >
-                          <div>
-                            <p className="scored">169/5</p>
+                          <div className="scored">
+                            {item.Innings[0] ? (
+                              item.AwayTeam.Id ===
+                              item.Innings[0].BattingTeamId ? (
+                                <p>{item.Innings[0].RunsScored}/</p>
+                              ) : item.Innings[1] ? (
+                                item.AwayTeam.Id ===
+                                  item.Innings[1].BattingTeamId && (
+                                  <p>{item.Innings[1].RunsScored}/</p>
+                                )
+                              ) : (
+                                <p style={{ color: "#aaa" }}>Yet to Bat</p>
+                              )
+                            ) : (
+                              <p>{item.AwayTeam.ShortName}</p>
+                            )}
+                            {item.Innings[0] ? (
+                              item.AwayTeam.Id ===
+                              item.Innings[0].BattingTeamId ? (
+                                <p>{item.Innings[0].NumberOfWicketsFallen}</p>
+                              ) : item.Innings[1] ? (
+                                item.AwayTeam.Id ===
+                                  item.Innings[1].BattingTeamId && (
+                                  <p>{item.Innings[1].NumberOfWicketsFallen}</p>
+                                )
+                              ) : null
+                            ) : null}
                           </div>
                           <div className="over">
-                            <p>Over(19.6)</p>
+                            {item.Innings[0] ? (
+                              item.AwayTeam.Id ===
+                              item.Innings[0].BattingTeamId ? (
+                                <p>{item.Innings[0].OversBowled} overs</p>
+                              ) : item.Innings[1] ? (
+                                item.AwayTeam.Id ===
+                                  item.Innings[1].BattingTeamId && (
+                                  <p>{item.Innings[1].OversBowled} overs</p>
+                                )
+                              ) : null
+                            ) : null}
                           </div>
                         </div>
                       ) : (

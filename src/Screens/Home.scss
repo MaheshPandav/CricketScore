@@ -1,4 +1,33 @@
 .main-container{
     padding: 10px 55px 10px 55px;
     background-color: grey;
+    .bottom-section{
+        flex-direction: row;
+        display: flex;
+        justify-content:space-between;
+        padding: 20px;
+        // background-color: yellow;
+        .first-section{
+           width: 23%;
+           background-color:grey;
+           height: 600px;
+           border-radius: 10px;
+           justify-content: center;
+           display: flex;
+        }
+        .middle-section{
+            width: 50%;
+            background-color:grey;
+            border-radius: 10px;
+            justify-content: center;
+            display: flex;
+        }
+        .last-section{
+            width: 23%;
+           background-color:grey;
+           border-radius: 10px;
+           justify-content: center;
+           display: flex;
+        }
+    }
 }
