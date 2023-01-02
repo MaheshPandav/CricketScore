@@ -1,6 +1,6 @@
 .main-container{
     padding: 10px 55px 10px 55px;
-    background-color: grey;
+    background-color: #000;
     .bottom-section{
         flex-direction: row;
         display: flex;
@@ -9,25 +9,28 @@
         // background-color: yellow;
         .first-section{
            width: 23%;
-           background-color:grey;
-           height: 600px;
+        //    background-color:grey;
+        //    height: 600px;
            border-radius: 10px;
            justify-content: center;
            display: flex;
+           color: #fff;
         }
         .middle-section{
             width: 50%;
-            background-color:grey;
+            // background-color:grey;
             border-radius: 10px;
             justify-content: center;
             display: flex;
+            color: #fff;
         }
         .last-section{
             width: 23%;
-           background-color:grey;
+        //    background-color:grey;
            border-radius: 10px;
            justify-content: center;
            display: flex;
+           color: #fff;
         }
     }
 }

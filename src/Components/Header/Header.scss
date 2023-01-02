@@ -1,11 +1,14 @@
 .Main {
   // background-color: #121b28;
-  background-color: #000;
+  background-color: #1d1e1f;
   width: 100%;
   align-items: center;
   justify-content: center;
   display: flex;
-  box-shadow: 21px 21px 20px -1px #fff;
+  // box-shadow: 21px 21px 20px -1px #fff;
+  position: fixed;
+  z-index: 100;
+  
 
   .header {
     flex-direction: row;

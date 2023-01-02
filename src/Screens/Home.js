@@ -6,6 +6,7 @@ import { API_URL } from "../Api.js";
 
 const Home = () => {
   const [match, setMatch] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   const allMatches = [];
 
@@ -38,6 +39,7 @@ const Home = () => {
       });
       console.log(allMatches);
       setMatch(allMatches);
+      setLoading(false)
     });
   };
 
@@ -46,7 +48,7 @@ const Home = () => {
   }, []);
   return (
     <div className="main-container">
-      <Slider data={match} />
+      <Slider data={match} isLoading={loading} />
       <div className="bottom-section">
         <div className="first-section">
         <p>Content</p>

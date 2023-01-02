@@ -53,7 +53,8 @@ export default function Home(props) {
           <p>Loading....</p>
         </div>
       ) : (
-        <Slider {...settings} className="slider-container">
+        <div className="slider-container">
+        <Slider {...settings}>
           {props.data.map((item, index) => (
             <Link to={`/matchDetails/${item.Id}`} key={index}>
               <div>
@@ -93,7 +94,7 @@ export default function Home(props) {
                           alt="live-img"
                           className="hometeam-logo"
                         />
-                        <p style={{ color: "black" }}>
+                        <p className="team-name">
                           {item.HomeTeam.ShortName}
                         </p>
                       </div>
@@ -158,7 +159,7 @@ export default function Home(props) {
                     {/* team b */}
                     <div className="right-team">
                       <div className="right-section">
-                        <p style={{ color: "black" }}>
+                        <p className="team-name">
                           {item.AwayTeam.ShortName}
                         </p>
                         <img
@@ -238,6 +239,7 @@ export default function Home(props) {
             </Link>
           ))}
         </Slider>
+        </div>
       )}
     </>
   );
