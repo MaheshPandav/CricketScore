@@ -6,7 +6,7 @@ import { API_URL } from "../Api.js";
 
 const Home = () => {
   const [match, setMatch] = useState([]);
-  const [loading, setLoading] = useState(true)
+  const [filter, setFilter] = useState(match);
 
   const allMatches = [];
 
@@ -39,26 +39,64 @@ const Home = () => {
       });
       console.log(allMatches);
       setMatch(allMatches);
-      setLoading(false)
+      setFilter(allMatches);
     });
   };
 
   useEffect(() => {
     allMatche();
   }, []);
+
+  const filterProduct = (cat) => {
+    const updatedList = match.filter((x) => x.IsCompleted === cat );
+    console.log(updatedList);
+    setFilter(updatedList);
+  };
+
+  const filterProductlive = (cat) => {
+    const updatedList = match.filter((x) => x.IsLive === cat );
+    console.log(updatedList);
+    setFilter(updatedList);
+  };
   return (
     <div className="main-container">
-      <Slider data={match} isLoading={loading} />
+      <div className="fillter-container">
+        <button
+          className="button"
+          onClick={() => setFilter(match)}
+        >
+          All
+        </button>
+        <button
+          className="button"
+          onClick={() => filterProductlive(true)}
+        >
+          Live
+        </button>
+        <button
+          className="button"
+          onClick={() => filterProduct(false)}
+        >
+          Upcoming
+        </button>
+        <button
+          className="button"
+          onClick={() => filterProduct(true)}
+        >
+          Complated
+        </button>
+      </div>
+      <Slider data={filter} />
       <div className="bottom-section">
         <div className="first-section">
-        <p>Content</p>
+          <p>Content</p>
         </div>
         <div className="middle-section">
-        <p>Content</p>
+          <p>Content</p>
         </div>
         <div className="last-section">
-        <p>Content</p>
-        </div> 
+          <p>Content</p>
+        </div>
       </div>
     </div>
   );
