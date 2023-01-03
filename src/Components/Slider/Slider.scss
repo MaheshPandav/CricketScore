@@ -25,7 +25,6 @@
       display: flex;
       align-items: center;
 
-      //   background-color: red;
       .match-number {
         color: #fff;
         font-size: 17px;
@@ -116,6 +115,10 @@
           display: flex;
         }
 
+        .over {
+          margin-top: 5px;
+          color: #fff;
+        }
         .over {
           margin-top: 5px;
           color: #fff;
@@ -230,4 +233,20 @@
   a {
     text-decoration: none;
   }
+}
+
+.match-not-found {
+  display: flex;
+  // width: 330px;
+  height: 220px;
+  margin: 12px;
+  flex-direction: column;
+  background-color: #1d1e1f;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: -1px 1px 16px -1px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  margin-top: 110px;
 }

@@ -1,16 +1,17 @@
 .main-container {
   padding: 10px 55px 10px 55px;
   background-color: #000;
+
   .fillter-container {
     margin-left: 30px;
     margin-top: 80px;
     margin-bottom: -80px;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 15px;
     display: flex;
-    // background-color: red;
-    width: 30%;
+    grid: 0%;
   }
+
   .button {
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
@@ -20,16 +21,19 @@
     border: 1px solid #fff;
     width: 90px;
   }
+
   .button:hover {
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
   }
+
   .bottom-section {
     flex-direction: row;
     display: flex;
     justify-content: space-between;
     padding: 20px;
+
     // background-color: yellow;
     .first-section {
       width: 23%;
@@ -40,6 +44,7 @@
       display: flex;
       color: #fff;
     }
+
     .middle-section {
       width: 50%;
       // background-color:grey;
@@ -48,6 +53,7 @@
       display: flex;
       color: #fff;
     }
+
     .last-section {
       width: 23%;
       //    background-color:grey;
@@ -58,6 +64,7 @@
     }
   }
 }
+
 @media (max-width: 1024px) {
   .main-container {
     .fillter-container {
