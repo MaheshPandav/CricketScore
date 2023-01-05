@@ -28,12 +28,11 @@
     border: 1px solid #000;
   }
 
-  .bottom-section {
+  .bottomm-section {
     flex-direction: row;
     display: flex;
     justify-content: space-between;
     padding: 20px;
-
     // background-color: yellow;
     .first-section {
       width: 23%;
@@ -52,6 +51,37 @@
       justify-content: center;
       display: flex;
       color: #fff;
+      flex-direction: column;
+      align-items: center;
+
+      .latest-news {
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+
+      .news-image {
+        // height: 450px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 3%;
+      }
+
+      .match-description {
+        margin-top: 30px;
+       .news-description{
+         font-size: 28px;
+       }
+      }
+
+      .match-ref {
+        margin-top: 25px;
+        margin-bottom: 30px;
+        .ref-title{
+          color: grey;
+          font-size: 15px;
+        }
+      }
     }
 
     .last-section {

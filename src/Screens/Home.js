@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import "../Screens/Home.scss";
 import Slider from "../Components/Slider/Slider";
 import axios from "axios";
-import { API_URL } from "../Api.js";
+import { API_URL, News_API_URL } from "../Api.js";
 
 const Home = () => {
   const [match, setMatch] = useState([]);
   const [filter, setFilter] = useState(match);
-  const [isLoading,setisLoading] = useState(true)
+  const [isLoading, setisLoading] = useState(true)
+  const [news, setNews] = useState([])
 
   const allMatches = [];
 
@@ -44,19 +45,27 @@ const Home = () => {
       setisLoading(false)
     });
   };
+  const NewsAPi = () => {
+    axios.get(News_API_URL).then((res) => {
+      setNews(res.data.news)
+    })
+  }
+
+  console.log(news)
 
   useEffect(() => {
     allMatche();
+    NewsAPi()
   }, []);
 
   const filterProduct = (cat) => {
-    const updatedList = match.filter((x) => x.IsCompleted === cat );
+    const updatedList = match.filter((x) => x.IsCompleted === cat);
     console.log(updatedList);
     setFilter(updatedList);
   };
 
   const filterProductlive = (cat) => {
-    const updatedList = match.filter((x) => x.IsLive === cat );
+    const updatedList = match.filter((x) => x.IsLive === cat);
     console.log(updatedList);
     setFilter(updatedList);
   };
@@ -88,13 +97,33 @@ const Home = () => {
           Complated
         </button>
       </div>
-      <Slider data={filter} isLoading={isLoading}/>
-      <div className="bottom-section">
+      <Slider data={filter} isLoading={isLoading} />
+      <div className="bottomm-section">
         <div className="first-section">
           <p>Content</p>
         </div>
         <div className="middle-section">
-          <p>Content</p>
+
+          <p className="latest-news">Latest News</p>
+
+          {news.map((item, index) => (
+            <div key={index}>
+
+              <img
+                src={item.imageUrl}
+                alt="live-img"
+                className="news-image"
+              />
+              <div className="match-description">
+                <p className="news-description">{item.title}</p>
+              </div>
+              <div className="match-ref">
+                {item.competitions[0] && (
+                  <p className="ref-title">{item.competitions[0].name}</p>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
         <div className="last-section">
           <p>Content</p>
