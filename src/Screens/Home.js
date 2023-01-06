@@ -9,6 +9,7 @@ const Home = () => {
   const [filter, setFilter] = useState(match);
   const [isLoading, setisLoading] = useState(true)
   const [news, setNews] = useState([])
+  const [select, setSelect] = useState(1)
 
   const allMatches = [];
 
@@ -43,6 +44,7 @@ const Home = () => {
       setMatch(allMatches);
       setFilter(allMatches);
       setisLoading(false)
+      setSelect(1)
     });
   };
   const NewsAPi = () => {
@@ -58,41 +60,47 @@ const Home = () => {
     NewsAPi()
   }, []);
 
-  const filterProduct = (cat) => {
+  const filterProduct = (cat, num) => {
     const updatedList = match.filter((x) => x.IsCompleted === cat);
     console.log(updatedList);
     setFilter(updatedList);
+    setSelect(num)
   };
 
-  const filterProductlive = (cat) => {
+  const filterProductlive = (cat, num) => {
     const updatedList = match.filter((x) => x.IsLive === cat);
     console.log(updatedList);
     setFilter(updatedList);
+    setSelect(num)
   };
   return (
     <div className="main-container">
       <div className="fillter-container">
         <button
+          style={{ backgroundColor: select === 1 ? '#fff' : '#000', color: select === 1 ? '#000' : '#fff' }}
           className="button"
-          onClick={() => setFilter(match)}
+          onClick={() => filterProduct(match === filter, 1)}
         >
           All
         </button>
         <button
+          style={{ backgroundColor: select === 2 ? '#fff' : '#000', color: select === 2 ? '#000' : '#fff' }}
           className="button"
-          onClick={() => filterProductlive(true)}
+          onClick={() => filterProductlive(true, 2)}
         >
           Live
         </button>
         <button
+          style={{ backgroundColor: select === 3 ? '#fff' : '#000', color: select === 3 ? '#000' : '#fff' }}
           className="button"
-          onClick={() => filterProduct(false)}
+          onClick={() => filterProduct(false, 3)}
         >
           Upcoming
         </button>
         <button
+          style={{ backgroundColor: select === 4 ? '#fff' : '#000', color: select === 4 ? '#000' : '#fff' }}
           className="button"
-          onClick={() => filterProduct(true)}
+          onClick={() => filterProduct(true, 4)}
         >
           Complated
         </button>

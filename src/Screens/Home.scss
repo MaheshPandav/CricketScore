@@ -16,16 +16,16 @@
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
     width: fit-content;
-    background-color: #000;
+    // background-color: #000;
     color: #fff;
     border: 1px solid #fff;
     width: 90px;
   }
 
   .button:hover {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid #fff;
   }
 
   .bottomm-section {
@@ -33,6 +33,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
+
     // background-color: yellow;
     .first-section {
       width: 23%;
@@ -69,15 +70,17 @@
 
       .match-description {
         margin-top: 30px;
-       .news-description{
-         font-size: 28px;
-       }
+
+        .news-description {
+          font-size: 28px;
+        }
       }
 
       .match-ref {
         margin-top: 25px;
         margin-bottom: 30px;
-        .ref-title{
+
+        .ref-title {
           color: grey;
           font-size: 15px;
         }

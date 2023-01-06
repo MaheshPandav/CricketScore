@@ -5,6 +5,8 @@ import Slider from "react-slick";
 import "./Slider.scss";
 import { Link } from "react-router-dom";
 import moment from "moment/moment";
+import Lottie from "lottie-react";
+import groovyWalkAnimation from "../../assets/LottieImage/loading2.json";
 
 export default function Home(props) {
   console.log(props.data);
@@ -50,7 +52,7 @@ export default function Home(props) {
     <>
       {props.isLoading ? (
         <div className="match-not-found">
-          <p>Loading....</p>
+          <Lottie animationData={groovyWalkAnimation} loop={true} style={{ height: 100, width: 100 }} />
         </div>
       ) : (
         <div className="slider-container">

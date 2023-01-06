@@ -8,11 +8,14 @@ const Header = () => {
   return (
     <div className="Main">
       <div className="header">
-        <img
-          className="image"
-          src="https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/All-Star-Cricket-Team-Logo-Maker-for-Cricket-Teams.png"
-          alt="new"
-        />
+        <a href="/">
+          <img
+            onClick={() => window.location.reload()}
+            className="image"
+            src="https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/All-Star-Cricket-Team-Logo-Maker-for-Cricket-Teams.png"
+            alt="new"
+          />
+        </a>
         <div className="middle-content">
           <ul className="middle-option">
             <p className="item-text">Live Scores</p>
