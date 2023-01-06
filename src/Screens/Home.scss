@@ -10,13 +10,13 @@
     gap: 15px;
     display: flex;
     grid: 0%;
+    width: 100%;
   }
 
   .button {
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
     width: fit-content;
-    // background-color: #000;
     color: #fff;
     border: 1px solid #fff;
     width: 90px;
@@ -104,6 +104,38 @@
       // background-color: red;
       margin-top: 125px;
       width: 50%;
+    }
+    .bottomm-section{
+      .first-section{
+        display: none;
+      }
+      flex-direction: column;
+    display: flex;
+    align-items: center;
+    // background-color: red;
+    .middle-section{
+      .latest-news {
+       font-size: 26px;
+      }
+      // background-color:yellow;
+      width: 100%;
+      .match-description {
+        .news-description {
+          font-size: 21px;
+        }
+      }
+    }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .main-container {
+    padding: 2px 35px 2px 35px;
+    .fillter-container {
+     justify-content: center;
+      width: 100%;
+      margin-left: -1px;
+
     }
   }
 }
