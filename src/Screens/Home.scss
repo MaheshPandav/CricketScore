@@ -33,21 +33,16 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-
-    // background-color: yellow;
     .first-section {
       width: 23%;
-      //    background-color:grey;
-      //    height: 600px;
       border-radius: 10px;
       justify-content: center;
       display: flex;
       color: #fff;
     }
 
-    .middle-section {
+    .news-section {
       width: 50%;
-      // background-color:grey;
       border-radius: 10px;
       justify-content: center;
       display: flex;
@@ -62,7 +57,6 @@
       }
 
       .news-image {
-        // height: 450px;
         width: 100%;
         object-fit: cover;
         border-radius: 3%;
@@ -89,7 +83,6 @@
 
     .last-section {
       width: 23%;
-      //    background-color:grey;
       border-radius: 10px;
       justify-content: center;
       display: flex;
@@ -101,41 +94,43 @@
 @media (max-width: 1024px) {
   .main-container {
     .fillter-container {
-      // background-color: red;
       margin-top: 125px;
       width: 50%;
     }
-    .bottomm-section{
-      .first-section{
+    .bottomm-section {
+      .first-section {
         display: none;
       }
       flex-direction: column;
-    display: flex;
-    align-items: center;
-    // background-color: red;
-    .middle-section{
-      .latest-news {
-       font-size: 26px;
-      }
-      // background-color:yellow;
-      width: 100%;
-      .match-description {
-        .news-description {
-          font-size: 21px;
+      display: flex;
+      align-items: center;
+      .news-section {
+        .latest-news {
+          font-size: 26px;
+        }
+        width: 100%;
+        .match-description {
+          .news-description {
+            font-size: 21px;
+          }
         }
       }
     }
-    }
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .main-container {
-    padding: 2px 35px 2px 35px;
+    padding: 2px 30px 2px 30px;
+    .bottomm-section{
+      padding: 0;
+    }
     .fillter-container {
-     justify-content: center;
+      justify-content: center;
       width: 100%;
       margin-left: -1px;
-
+    }
+    .news-section {
+      width: 100%;
     }
   }
 }

@@ -52,11 +52,15 @@ export default function Home(props) {
     <>
       {props.isLoading ? (
         <div className="match-not-found">
-          <Lottie animationData={groovyWalkAnimation} loop={true} style={{ height: 100, width: 100 }} />
+          <Lottie
+            animationData={groovyWalkAnimation}
+            loop={true}
+            style={{ height: 100, width: 100 }}
+          />
         </div>
       ) : (
         <div className="slider-container">
-          {props.data.length > 0 ?
+          {props.data.length > 0 ? (
             <Slider {...settings}>
               {props.data.map((item, index) => (
                 <Link to={`/matchDetails/${item.Id}`} key={index}>
@@ -112,11 +116,11 @@ export default function Home(props) {
                               <div className="scored">
                                 {item.Innings[0] ? (
                                   item.HomeTeam.Id ===
-                                    item.Innings[0].BattingTeamId ? (
+                                  item.Innings[0].BattingTeamId ? (
                                     <p>{item.Innings[0].RunsScored}/</p>
                                   ) : item.Innings[1] ? (
                                     item.HomeTeam.Id ===
-                                    item.Innings[1].BattingTeamId && (
+                                      item.Innings[1].BattingTeamId && (
                                       <p>{item.Innings[1].RunsScored}/</p>
                                     )
                                   ) : (
@@ -127,12 +131,16 @@ export default function Home(props) {
                                 )}
                                 {item.Innings[0] ? (
                                   item.HomeTeam.Id ===
-                                    item.Innings[0].BattingTeamId ? (
-                                    <p>{item.Innings[0].NumberOfWicketsFallen}</p>
+                                  item.Innings[0].BattingTeamId ? (
+                                    <p>
+                                      {item.Innings[0].NumberOfWicketsFallen}
+                                    </p>
                                   ) : item.Innings[1] ? (
                                     item.HomeTeam.Id ===
-                                    item.Innings[1].BattingTeamId && (
-                                      <p>{item.Innings[1].NumberOfWicketsFallen}</p>
+                                      item.Innings[1].BattingTeamId && (
+                                      <p>
+                                        {item.Innings[1].NumberOfWicketsFallen}
+                                      </p>
                                     )
                                   ) : null
                                 ) : null}
@@ -140,12 +148,16 @@ export default function Home(props) {
                               <div>
                                 {item.Innings[0] ? (
                                   item.HomeTeam.Id ===
-                                    item.Innings[0].BattingTeamId ? (
-                                    <p className="over-text">{item.Innings[0].OversBowled} overs</p>
+                                  item.Innings[0].BattingTeamId ? (
+                                    <p className="over-text">
+                                      {item.Innings[0].OversBowled} overs
+                                    </p>
                                   ) : item.Innings[1] ? (
                                     item.HomeTeam.Id ===
-                                    item.Innings[1].BattingTeamId && (
-                                      <p className="over-text">{item.Innings[1].OversBowled} overs</p>
+                                      item.Innings[1].BattingTeamId && (
+                                      <p className="over-text">
+                                        {item.Innings[1].OversBowled} overs
+                                      </p>
                                     )
                                   ) : null
                                 ) : null}
@@ -182,11 +194,11 @@ export default function Home(props) {
                               <div className="scored">
                                 {item.Innings[0] ? (
                                   item.AwayTeam.Id ===
-                                    item.Innings[0].BattingTeamId ? (
+                                  item.Innings[0].BattingTeamId ? (
                                     <p>{item.Innings[0].RunsScored}/</p>
                                   ) : item.Innings[1] ? (
                                     item.AwayTeam.Id ===
-                                    item.Innings[1].BattingTeamId && (
+                                      item.Innings[1].BattingTeamId && (
                                       <p>{item.Innings[1].RunsScored}/</p>
                                     )
                                   ) : (
@@ -197,12 +209,16 @@ export default function Home(props) {
                                 )}
                                 {item.Innings[0] ? (
                                   item.AwayTeam.Id ===
-                                    item.Innings[0].BattingTeamId ? (
-                                    <p>{item.Innings[0].NumberOfWicketsFallen}</p>
+                                  item.Innings[0].BattingTeamId ? (
+                                    <p>
+                                      {item.Innings[0].NumberOfWicketsFallen}
+                                    </p>
                                   ) : item.Innings[1] ? (
                                     item.AwayTeam.Id ===
-                                    item.Innings[1].BattingTeamId && (
-                                      <p>{item.Innings[1].NumberOfWicketsFallen}</p>
+                                      item.Innings[1].BattingTeamId && (
+                                      <p>
+                                        {item.Innings[1].NumberOfWicketsFallen}
+                                      </p>
                                     )
                                   ) : null
                                 ) : null}
@@ -210,12 +226,16 @@ export default function Home(props) {
                               <div className="over">
                                 {item.Innings[0] ? (
                                   item.AwayTeam.Id ===
-                                    item.Innings[0].BattingTeamId ? (
-                                    <p className="over-text">{item.Innings[0].OversBowled} overs</p>
+                                  item.Innings[0].BattingTeamId ? (
+                                    <p className="over-text">
+                                      {item.Innings[0].OversBowled} overs
+                                    </p>
                                   ) : item.Innings[1] ? (
                                     item.AwayTeam.Id ===
-                                    item.Innings[1].BattingTeamId && (
-                                      <p className="over-text">{item.Innings[1].OversBowled} overs</p>
+                                      item.Innings[1].BattingTeamId && (
+                                      <p className="over-text">
+                                        {item.Innings[1].OversBowled} overs
+                                      </p>
                                     )
                                   ) : null
                                 ) : null}
@@ -228,7 +248,13 @@ export default function Home(props) {
                       </div>
                       <div className="bottom-section">
                         {item.IsLive || item.IsCompleted ? (
-                          <p className="result-text">{item.ResultText}</p>
+                          <p
+                            className={
+                              item.IsLive ? "live-result-text" : "result-text"
+                            }
+                          >
+                            {item.ResultText}
+                          </p>
                         ) : (
                           <p className="result-text">
                             {new Date(item.StartDateTime).toDateString() +
@@ -241,7 +267,12 @@ export default function Home(props) {
                   </div>
                 </Link>
               ))}
-            </Slider> : <div className="match-not-found"><p style={{ color: '#fff' }}>Live Match Not Found.</p></div>}
+            </Slider>
+          ) : (
+            <div className="match-not-found">
+              <p style={{ color: "#fff" }}>Live Match Not Found.</p>
+            </div>
+          )}
         </div>
       )}
     </>

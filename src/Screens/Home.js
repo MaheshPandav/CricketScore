@@ -7,9 +7,9 @@ import { API_URL, News_API_URL } from "../Api.js";
 const Home = () => {
   const [match, setMatch] = useState([]);
   const [filter, setFilter] = useState(match);
-  const [isLoading, setisLoading] = useState(true)
-  const [news, setNews] = useState([])
-  const [select, setSelect] = useState(1)
+  const [isLoading, setisLoading] = useState(true);
+  const [news, setNews] = useState([]);
+  const [select, setSelect] = useState(1);
 
   const allMatches = [];
 
@@ -43,62 +43,74 @@ const Home = () => {
       console.log(allMatches);
       setMatch(allMatches);
       setFilter(allMatches);
-      setisLoading(false)
-      setSelect(1)
+      setisLoading(false);
+      setSelect(1);
     });
   };
   const NewsAPi = () => {
     axios.get(News_API_URL).then((res) => {
-      setNews(res.data.news)
-    })
-  }
+      setNews(res.data.news);
+    });
+  };
 
-  console.log(news)
+  console.log(news);
 
   useEffect(() => {
     allMatche();
-    NewsAPi()
+    NewsAPi();
   }, []);
 
   const filterProduct = (cat, num) => {
     const updatedList = match.filter((x) => x.IsCompleted === cat);
     console.log(updatedList);
     setFilter(updatedList);
-    setSelect(num)
+    setSelect(num);
   };
 
   const filterProductlive = (cat, num) => {
     const updatedList = match.filter((x) => x.IsLive === cat);
     console.log(updatedList);
     setFilter(updatedList);
-    setSelect(num)
+    setSelect(num);
   };
   return (
     <div className="main-container">
       <div className="fillter-container">
         <button
-          style={{ backgroundColor: select === 1 ? '#fff' : '#000', color: select === 1 ? '#000' : '#fff' }}
+          style={{
+            backgroundColor: select === 1 ? "#fff" : "#000",
+            color: select === 1 ? "#000" : "#fff",
+          }}
           className="button"
           onClick={() => filterProduct(match === filter, 1)}
         >
           All
         </button>
         <button
-          style={{ backgroundColor: select === 2 ? '#fff' : '#000', color: select === 2 ? '#000' : '#fff' }}
+          style={{
+            backgroundColor: select === 2 ? "#fff" : "#000",
+            color: select === 2 ? "#000" : "#fff",
+          }}
           className="button"
           onClick={() => filterProductlive(true, 2)}
         >
           Live
         </button>
         <button
-          style={{ backgroundColor: select === 3 ? '#fff' : '#000', color: select === 3 ? '#000' : '#fff' }}
+          style={{
+            backgroundColor: select === 3 ? "#fff" : "#000",
+            color: select === 3 ? "#000" : "#fff",
+          }}
           className="button"
           onClick={() => filterProduct(false, 3)}
         >
           Upcoming
         </button>
         <button
-          style={{ backgroundColor: select === 4 ? '#fff' : '#000', color: select === 4 ? '#000' : '#fff' }}
+          style={{
+            backgroundColor: select === 4 ? "#fff" : "#000",
+            color: select === 4 ? "#000" : "#fff",
+          }}
           className="button"
           onClick={() => filterProduct(true, 4)}
         >
@@ -110,18 +122,12 @@ const Home = () => {
         <div className="first-section">
           <p>Content</p>
         </div>
-        <div className="middle-section">
-
+        <div className="news-section">
           <p className="latest-news">Latest News</p>
 
           {news.map((item, index) => (
             <div key={index}>
-
-              <img
-                src={item.imageUrl}
-                alt="live-img"
-                className="news-image"
-              />
+              <img src={item.imageUrl} alt="live-img" className="news-image" />
               <div className="match-description">
                 <p className="news-description">{item.title}</p>
               </div>
