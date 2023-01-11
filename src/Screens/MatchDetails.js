@@ -2,16 +2,22 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../Screens/MatchDetails.scss";
+import Lottie from "lottie-react";
+import groovyWalkAnimation from "../assets/LottieImage/loading2.json";
+import MatchDetailsData from "../Screens/MatchDetailsData";
 
 const MatchDetails = () => {
   const [data, setScore] = useState([]);
   const [player, setPlayer] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [tab, setTab] = useState("MatchInfo");
+  const [Commentry, setCommentry] = useState([]);
 
   const { id } = useParams();
   console.log(id);
 
   const SCORED_API = `https://apiv2.cricket.com.au/web/views/scorecard?FixtureId=${id}&jsconfig=eccn:true`;
+  const COMM_API = `https://apiv2.cricket.com.au/web/views/comments?FixtureId=${id}&IncludeVideoReplays=true&OverLimit=50&jsconfig=eccn:true&LastOverNumber=50`;
   const Score = () => {
     axios.get(SCORED_API).then((res) => {
       setScore(res.data.fixture);
@@ -20,8 +26,16 @@ const MatchDetails = () => {
     });
   };
 
+  const CommentryApi = () => {
+    axios.get(COMM_API).then((res) => {
+      setCommentry(res.data.inning.overs);
+      console.log(res.data.inning.overs);
+    });
+  };
+
   useEffect(() => {
     Score();
+    CommentryApi();
   }, []);
 
   return (
@@ -187,9 +201,52 @@ const MatchDetails = () => {
             <p>No data found</p>
           )
         ) : (
-          <p>loading</p>
+          <div
+            style={{
+              height: 100,
+              width: 100,
+              backgroundColor: "grey",
+              color: "#fff",
+              borderRadius: 5,
+              marginTop: 70,
+            }}
+          >
+            <Lottie animationData={groovyWalkAnimation} loop={true} />
+          </div>
         )}
       </div>
+      <div
+        style={{ height: 1, width: "100%", backgroundColor: "#1d1e1f" }}
+      ></div>
+      <div
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          display: "flex",
+        }}
+      >
+        <div className="options">
+          <div className="MatchInfo" onClick={() => setTab("MatchInfo")}>
+            <p style={{ color: tab === "MatchInfo" ? "pink" : "" }}>MatchInfo</p>
+          </div>
+          <div className="Scorecard" onClick={() => setTab("Scorecard")}>
+            <p style={{ color: tab === "Scorecard" ? "pink" : "" }}>Scorecard</p>
+          </div>
+          <div className="Commentry" onClick={() => setTab("Commentry")}>
+            <p style={{ color: tab === "Commentry" ? "pink" : "" }}>Commentry</p>
+          </div>
+          <div className="Player" onClick={() => setTab("Player")}>
+            <p style={{ color: tab === "Player" ? "pink" : "" }}>Player</p>
+          </div>
+        </div>
+      </div>
+      {/* <div style={{ height: 1, width: "100%", backgroundColor: "grey" }}></div> */}
+      <MatchDetailsData
+        tab={tab}
+        data={data}
+        Commentry={Commentry}
+        player={player}
+      />
     </div>
   );
 };

@@ -129,7 +129,7 @@
           }
         }
       }
-      .result-text{
+      .result-text {
         text-align: center;
       }
 
@@ -169,6 +169,35 @@
       }
     }
   }
+  .options {
+    background-color: #1d1e1f;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 0 10px 0 10px;
+    height: 55px;
+    flex-direction: row;
+    // color: #fff;
+    border-radius: 5px;
+    .MatchInfo {
+      color: #fff;
+      height: 15px;
+      cursor: pointer;
+    }
+    .Scorecard {
+      color: #fff;
+      cursor: pointer;
+    }
+    .Commentry {
+      color: #fff;
+      cursor: pointer;
+    }
+    .Player {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
@@ -177,6 +206,9 @@
       .match-data {
         width: 60%;
       }
+    }
+    .options {
+      width: 60%;
     }
   }
 }
@@ -245,6 +277,9 @@
         }
       }
     }
+    .options {
+      width: 75%;
+    }
   }
 }
 
@@ -311,6 +346,9 @@
           }
         }
       }
+    }
+    .options {
+      width: 90%;
     }
   }
 }
