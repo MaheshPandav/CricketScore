@@ -40,7 +40,7 @@ const Home = () => {
       upcoming.forEach((fixture) => {
         allMatches.push(fixture);
       });
-      console.log(allMatches);
+      // console.log(allMatches);
       setMatch(allMatches);
       setFilter(allMatches);
       setisLoading(false);
@@ -53,7 +53,7 @@ const Home = () => {
     });
   };
 
-  console.log(news);
+  // console.log(news);
 
   useEffect(() => {
     allMatche();

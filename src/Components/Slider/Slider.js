@@ -9,7 +9,7 @@ import Lottie from "lottie-react";
 import groovyWalkAnimation from "../../assets/LottieImage/loading2.json";
 
 export default function Home(props) {
-  console.log(props.data);
+  // console.log(props.data);
   var settings = {
     dots: false,
     infinite: false,
@@ -149,13 +149,13 @@ export default function Home(props) {
                                 {item.Innings[0] ? (
                                   item.HomeTeam.Id ===
                                   item.Innings[0].BattingTeamId ? (
-                                    <p className="over-text">
+                                    <p className="over">
                                       {item.Innings[0].OversBowled} overs
                                     </p>
                                   ) : item.Innings[1] ? (
                                     item.HomeTeam.Id ===
                                       item.Innings[1].BattingTeamId && (
-                                      <p className="over-text">
+                                      <p className="over">
                                         {item.Innings[1].OversBowled} overs
                                       </p>
                                     )
