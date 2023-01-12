@@ -1,14 +1,45 @@
 .MatchDetailsData {
   justify-content: center;
   display: flex;
-  //   height: 110vh;
+  height: 110vh;
   .main-details {
     background-color: #1d1e1f;
     width: 50%;
+    height: 100%;
     justify-content: space-between;
     display: flex;
-    padding: 0 10px 0 10px;
-    color: pink;
+    // padding: 0 10px 0 10px;
+    // color: pink;
+    .matchinfo-page{
+      // background-color: red;
+      width: 100%;
+      padding: 30px;
+      .data-section{
+          // background-color: yellow;
+          flex-direction: row;
+          display: flex;
+          gap:50px;
+          margin-bottom: 40px;
+          color: #fff;
+          font-weight: 500;
+          font-size: 17px;
+          .match-option{
+            // background-color: red;
+            width: 120px;
+          }
+          .matchinfo-title{
+            font-size: 30px;
+          }
+          .matchinfo-data{
+            font-weight: 100;
+            color:aliceblue;
+          }
+      }
+    }
+    .Player-page{
+      width: 100%;
+      padding: 40px;
+    }
   }
 }
 
@@ -31,7 +62,7 @@
 @media (max-width: 480px) {
   .MatchDetailsData {
     .main-details {
-      width: 90%;
+      width: 100%;
     }
   }
 }

@@ -215,9 +215,9 @@ const MatchDetails = () => {
           </div>
         )}
       </div>
-      <div
+      {/* <div
         style={{ height: 1, width: "100%", backgroundColor: "#1d1e1f" }}
-      ></div>
+      ></div> */}
       <div
         style={{
           alignItems: "center",
@@ -226,17 +226,17 @@ const MatchDetails = () => {
         }}
       >
         <div className="options">
-          <div className="MatchInfo" onClick={() => setTab("MatchInfo")}>
-            <p style={{ color: tab === "MatchInfo" ? "pink" : "" }}>MatchInfo</p>
+          <div className={tab === "MatchInfo" ? "MatchInfo-select" : 'MatchInfo'} onClick={() => setTab("MatchInfo")}>
+            <p>MatchInfo</p>
           </div>
-          <div className="Scorecard" onClick={() => setTab("Scorecard")}>
-            <p style={{ color: tab === "Scorecard" ? "pink" : "" }}>Scorecard</p>
+          <div className={tab === "Scorecard" ? "Scorecard-select" : 'Scorecard'} onClick={() => setTab("Scorecard")}>
+            <p>Scorecard</p>
           </div>
-          <div className="Commentry" onClick={() => setTab("Commentry")}>
-            <p style={{ color: tab === "Commentry" ? "pink" : "" }}>Commentry</p>
+          <div className={tab === "Commentry" ? "Commentry-select" : 'Commentry'} onClick={() => setTab("Commentry")}>
+            <p>Commentry</p>
           </div>
-          <div className="Player" onClick={() => setTab("Player")}>
-            <p style={{ color: tab === "Player" ? "pink" : "" }}>Player</p>
+          <div className={tab === "Player" ? "Player-select" : 'Player'} onClick={() => setTab("Player")}>
+            <p>Player</p>
           </div>
         </div>
       </div>

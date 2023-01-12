@@ -175,28 +175,127 @@
     align-items: center;
     justify-content: space-between;
     display: flex;
-    padding: 0 10px 0 10px;
-    height: 55px;
+    // padding: 0 10px 0 10px;
+    height: 45px;
     flex-direction: row;
     // color: #fff;
-    border-radius: 5px;
+    border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    
     .MatchInfo {
       color: #fff;
-      height: 15px;
+      height: 100%;
+      width: 260px;
       cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    
+    }
+    .MatchInfo-select{
+      color: #fff;
+      height: 100%;
+      width: 260px;
+      cursor: pointer;
+      align-items: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      justify-content: center;
+      display: flex;
+      background-color: #000;
+    }
+    .MatchInfo:hover {
+      background-color: #000;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
     }
     .Scorecard {
       color: #fff;
       cursor: pointer;
+      height: 100%;
+      width: 260px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
     }
+    .Scorecard-select{
+      color: #fff;
+      height: 100%;
+      width: 260px;
+      cursor: pointer;
+      align-items: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      justify-content: center;
+      display: flex;
+      background-color: #000;
+    }
+    .Scorecard:hover {
+      background-color: #000;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+   }
     .Commentry {
       color: #fff;
       cursor: pointer;
+      height: 100%;
+      width: 260px;
+      align-items: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      justify-content: center;
+      display: flex;
     }
+    .Commentry-select{
+      color: #fff;
+      height: 100%;
+      width: 260px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      display: flex;
+      background-color: #000;
+    }
+    .Commentry:hover {
+      background-color: #000;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+   }
     .Player {
       color: #fff;
       cursor: pointer;
+      height: 100%;
+      width: 260px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
     }
+    .Player-select{
+      color: #fff;
+      height: 100%;
+      width: 260px;
+      cursor: pointer;
+      align-items: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      justify-content: center;
+      display: flex;
+      background-color: #000;
+    }
+    .Player:hover {
+      background-color: #000;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+   }
   }
 }
 
@@ -348,7 +447,7 @@
       }
     }
     .options {
-      width: 90%;
+      width: 100%;
     }
   }
 }
