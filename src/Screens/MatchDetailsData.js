@@ -38,7 +38,7 @@ const MatchDetailsData = (props) => {
             </div>
             <div className="data-section">
             <p className="match-option">Match-Status: </p>
-            <p className="matchinfo-data">{props.data.isCompleted ? 'Complated' : props.data.isLive ? 'In-Progress' : 'Feautured'}</p>
+            <p className="matchinfo-data">{props.data.isCompleted ? '✅ Complated' : props.data.isLive ? '🔴 Live' : '🕒 Feautured'}</p>
             </div>
           </div>
         ) : props.tab === "Scorecard" ? (

@@ -36,6 +36,10 @@ const MatchDetails = () => {
   useEffect(() => {
     Score();
     CommentryApi();
+    setInterval(() => {
+      Score();
+      CommentryApi();
+    }, 10000);
   }, []);
 
   return (
@@ -61,7 +65,7 @@ const MatchDetails = () => {
                         className="hometeam-logo"
                       />
 
-                      <p className="team-name">{data.homeTeam.name}</p>
+                      <p className="team-name">{data.homeTeam.shortName}</p>
                     </div>
                     {data.isLive || data.isCompleted ? (
                       <div className="scored-section-team-a">
@@ -125,7 +129,7 @@ const MatchDetails = () => {
                   </div>
                   <div className="right-team">
                     <div className="top-view">
-                      <p className="team-name">{data.awayTeam.name}</p>
+                      <p className="team-name">{data.awayTeam.shortName}</p>
 
                       <img
                         src={data.awayTeam.logoUrl}
@@ -216,7 +220,7 @@ const MatchDetails = () => {
         )}
       </div>
       {/* <div
-        style={{ height: 1, width: "100%", backgroundColor: "#1d1e1f" }}
+        style={{ height: 0.7, width: "100%", backgroundColor: "#fff" }}
       ></div> */}
       <div
         style={{
