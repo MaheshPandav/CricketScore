@@ -1,90 +1,111 @@
-.commentry{
-    padding: 25px;
-    .message-over{
-        padding: 10px;
-        font-size: 18px;
+.commentry {
+  padding: 25px;
+  .over-overview{
+    flex-direction:row;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    // height: 40px;
+    background-color: #1d1e1f;
+    align-items: center;
+    border-radius: 5px;
+  }
+  .message-over {
+    padding: 10px;
+    font-size: 18px;
+  }
+  .single-overs {
+    //  background-color: red;
+    padding: 8px;
+    flex-direction: row;
+    display: flex;
+    gap: 10px;
+    .over-and-run {
+    //  background-color:green;
+      align-items: center;
+      display: flex;
+    //   justify-content: center;
+    gap: 10px;
+      flex-direction: column;
     }
-    .single-overs{
-        //  background-color: red;
-        padding: 5px;
-        flex-direction: row;
-        display: flex;
-        gap:10px;
-        .five{
-            color: #fff;
-           height:30px;
-           width: 35px;
-           align-items: center;
-           display: flex;
-           justify-content: center;
-           border-radius: 60%;
-           background-color: #1d1e1f;
-       }
-        .four{
-             color: #fff;
-            height:30px;
-            width: 35px;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            border-radius: 60%;
-            background-color: #1d1e1f;
-        }
-        .six{
-            color: #fff;
-           height:30px;
-           width: 35px;
-           align-items: center;
-           display: flex;
-           justify-content: center;
-           border-radius: 60%;
-           background-color: #1d1e1f;
-       }
-       .single{
-        color: #fff;
-       height:30px;
-       width: 35px;
-       align-items: center;
-       display: flex;
-       justify-content: center;
-       border-radius: 60%;
-       background-color: #1d1e1f;
-   }
-   .zero{
-    color: #fff;
-   height:30px;
-   width: 35px;
-   align-items: center;
-   display: flex;
-   justify-content: center;
-   border-radius: 60%;
-   background-color: #1d1e1f;
-}
-.double{
-    color: #fff;
-   height:30px;
-   width: 35px;
-   align-items: center;
-   display: flex;
-   justify-content: center;
-   border-radius: 60%;
-   background-color: #1d1e1f;
-}
-.wickets{
-    color: #fff;
-   height:30px;
-   width: 35px;
-   align-items: center;
-   display: flex;
-   justify-content: center;
-   border-radius: 60%;
-   background-color: #1d1e1f;
-}
-        .message{
-            background-color: #1d1e1f;
-            border-radius: 5px;
-            padding: 5px;
-            text-align: justify;
-        }
+    .five {
+      color: #fff;
+      height: 30px;
+      width: 30px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 60%;
+      background-color: #1d1e1f;
     }
+    .four {
+      color: #fff;
+      height: 30px;
+      width: 30px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 60%;
+      background-color: #1a5a99;
+    }
+    .six {
+      color: #fff;
+      height: 30px;
+      width: 30px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 60%;
+      background-color: #a81171;
+    }
+    .single {
+      color: #fff;
+      height: 30px;
+      width: 30px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 60%;
+      background-color: #1d1e1f;
+    }
+    .zero {
+      color: #fff;
+      height: 30px;
+      width: 30px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 60%;
+      background-color: #1d1e1f;
+    }
+    .double {
+      color: #fff;
+      height: 30px;
+      width: 30px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 60%;
+      background-color: #1d1e1f;
+    }
+    .wickets {
+      color: #fff;
+      height: 30px;
+      width: 30px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 60%;
+      background-color: red;
+    }
+    .message {
+      background-color: #1d1e1f;
+      border-radius: 5px;
+      padding: 8px;
+      text-align: justify;
+      align-items: center;
+      display: flex;
+      line-height: 1.4;
+    }
+  }
 }

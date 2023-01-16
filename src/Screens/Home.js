@@ -63,7 +63,7 @@ const Home = () => {
   const filterProduct = (cat, num) => {
     const updatedList = match.filter((x) => x.IsCompleted === cat);
     // console.log(updatedList);
-    // setFilter(updatedList);
+    setFilter(updatedList);
     setSelect(num);
   };
 

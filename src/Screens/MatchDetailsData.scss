@@ -73,6 +73,10 @@
           justify-content: space-between;
           // background-color: red;
           word-break: break-all;
+          text-align: end;
+          .match-option{
+            text-align: left;
+          }
         }
       }
     }

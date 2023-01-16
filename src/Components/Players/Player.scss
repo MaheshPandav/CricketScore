@@ -8,7 +8,7 @@
         height: 25px;
         align-items: center;
         .team-a{
-            height: 20px;
+            // height: 20px;
             // width: 140px;
             background-color: #fff;
             align-items: center;
@@ -17,9 +17,11 @@
             padding: 10px;
             border-radius: 10px;
             color: #000;
+            font-size: 13px;
+            text-align: center;
         }
         .team-b{
-            height: 20px;
+            // height: 20px;
             background-color: #fff;
             align-items: center;
             justify-content: center;
@@ -27,6 +29,9 @@
             padding: 10px;
             border-radius: 10px;
             color: #000;
+            font-size: 13px;
+            text-align: center;
+
         }
     }
     .team-Player{
@@ -34,7 +39,7 @@
         display: flex;
         margin-top: 40px;
         // height: 25px;
-        align-items: center;
+        align-items: flex-start;
         .home-team {
             display: flex;
             // padding: 20px;
