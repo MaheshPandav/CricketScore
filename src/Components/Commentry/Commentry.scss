@@ -1,0 +1,90 @@
+.commentry{
+    padding: 25px;
+    .message-over{
+        padding: 10px;
+        font-size: 18px;
+    }
+    .single-overs{
+        //  background-color: red;
+        padding: 5px;
+        flex-direction: row;
+        display: flex;
+        gap:10px;
+        .five{
+            color: #fff;
+           height:30px;
+           width: 35px;
+           align-items: center;
+           display: flex;
+           justify-content: center;
+           border-radius: 60%;
+           background-color: #1d1e1f;
+       }
+        .four{
+             color: #fff;
+            height:30px;
+            width: 35px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            border-radius: 60%;
+            background-color: #1d1e1f;
+        }
+        .six{
+            color: #fff;
+           height:30px;
+           width: 35px;
+           align-items: center;
+           display: flex;
+           justify-content: center;
+           border-radius: 60%;
+           background-color: #1d1e1f;
+       }
+       .single{
+        color: #fff;
+       height:30px;
+       width: 35px;
+       align-items: center;
+       display: flex;
+       justify-content: center;
+       border-radius: 60%;
+       background-color: #1d1e1f;
+   }
+   .zero{
+    color: #fff;
+   height:30px;
+   width: 35px;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   border-radius: 60%;
+   background-color: #1d1e1f;
+}
+.double{
+    color: #fff;
+   height:30px;
+   width: 35px;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   border-radius: 60%;
+   background-color: #1d1e1f;
+}
+.wickets{
+    color: #fff;
+   height:30px;
+   width: 35px;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   border-radius: 60%;
+   background-color: #1d1e1f;
+}
+        .message{
+            background-color: #1d1e1f;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: justify;
+        }
+    }
+}

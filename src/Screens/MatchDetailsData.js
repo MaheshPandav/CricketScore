@@ -3,11 +3,12 @@ import "../../src/Screens/MatchDetailsData.scss";
 import moment from "moment/moment";
 import GoogleMapReact from 'google-map-react';
 import Players from "../Components/Players/Players";
+import Commentry from "../Components/Commentry/Commentry";
 const MatchDetailsData = (props) => {
   // console.log(props.tab);
-  console.log(props.player);
+  // console.log(props.player);
   // console.log(props.data)
-  console.log(props.Commentry)
+  // console.log(props.Commentry)
   return (
     <div className="MatchDetailsData">
       <div className="main-details">
@@ -47,7 +48,7 @@ const MatchDetailsData = (props) => {
           </div>
         ) : props.tab === "Commentry" ? (
           <div className="Commentry-page">
-            <p>Commentry</p>
+            <Commentry Commentry={props.Commentry}/>
           </div>
         ) : props.tab === "Player" ? (
           <div className="Player-page">

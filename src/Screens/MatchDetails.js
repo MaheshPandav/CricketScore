@@ -14,7 +14,7 @@ const MatchDetails = () => {
   const [Commentry, setCommentry] = useState([]);
 
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
 
   const SCORED_API = `https://apiv2.cricket.com.au/web/views/scorecard?FixtureId=${id}&jsconfig=eccn:true`;
   const COMM_API = `https://apiv2.cricket.com.au/web/views/comments?FixtureId=${id}&IncludeVideoReplays=true&OverLimit=50&jsconfig=eccn:true&LastOverNumber=50`;
@@ -29,7 +29,7 @@ const MatchDetails = () => {
   const CommentryApi = () => {
     axios.get(COMM_API).then((res) => {
       setCommentry(res.data.inning.overs);
-      console.log(res.data.inning.overs);
+      // console.log(res.data.inning.overs);
     });
   };
 

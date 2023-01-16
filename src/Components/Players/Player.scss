@@ -51,8 +51,10 @@
                 width: 40px;
               }
               p {
-                font-weight: 600;
+                // font-weight: 600;
                 color: #fff;
+                text-align: start;
+                opacity: 0.8;
               }
             }
           }
@@ -70,8 +72,10 @@
                 width: 40px;
               }
               p {
-                font-weight: 600;
+                // font-weight: 100;
                 color: #fff;
+                text-align: end;
+                opacity: 0.8;
               }
             }
           }
