@@ -2,8 +2,7 @@ import React from 'react'
 import '../Commentry/Commentry.scss'
 
 const Commentry = (props) => {
-    console.log(props)
-    
+    // console.log(props) 
   return (
     <div>
         {props.Commentry.map((item,index)=>{
@@ -54,6 +53,9 @@ const Commentry = (props) => {
                       )}
                        {balls.isWicket === true && (
                         <p className='wickets'>W</p>
+                      )}
+                      {balls.comments[0].commentTypeId === "Wide"  && (
+                        <p className='wide'>wide</p>
                       )}
                       <p style={{color:'#fff'}}>
                         {item.overNumber - 1}.{balls.ballNumber}
