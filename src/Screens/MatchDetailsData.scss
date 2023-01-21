@@ -70,7 +70,7 @@
             // background-color: green;
             flex-direction: row;
             display: flex;
-            width: 28%;
+            width: 26%;
             //  gap: 80px;
             padding: 10px;
             align-items: center;
@@ -82,11 +82,13 @@
         // background-color: pink;
         padding-top: 10px;
         .player-image {
-        //  background-color: yellow;
+          // background-color: yellow;
           flex-direction: row;
           display: flex;
-          gap: 10px;
+          // gap: 10px;
           width: 100%;
+          align-items: center;
+          padding-top: 10px;
           .player-name {
             width: 45%;
             // padding: 10px;

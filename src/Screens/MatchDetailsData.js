@@ -64,7 +64,8 @@ const MatchDetailsData = (props) => {
           props.data.isLive || props.data.isCompleted ? (
             <div className="Scorecard-page">
               <div className="team-option">
-                <div className="team-a">
+                <div className="team-a" onClick={() => setOption(!option)} style={{backgroundColor:option ? 'pink' : ''}}>
+                {/* onClick={() => setOption(!option) */}
                   {props.data.innings[0].battingTeamId && (
                     <p
                       style={{ color: "#fff" }}
@@ -96,7 +97,7 @@ const MatchDetailsData = (props) => {
                     />
                   )}
                 </div>
-                <div className="team-b">
+                <div className="team-b" onClick={() => setOptionb(!optionb)} style={{backgroundColor: optionb ? 'pink' : ''}}>
                   {props.data.innings[1] &&
                     props.data.innings[0].battingTeamId && (
                       <p
@@ -145,93 +146,101 @@ const MatchDetailsData = (props) => {
                 </div>
                 <div className="scored-section">
                   {option && (
-                        <div>
-                        {props.data.innings[team].batsmen.map((res, index) => (
-                          <div className="player-image">
-                            <div className="player-name">
-                              <img
-                                src={
-                                  props.player.find(
-                                    (data) => data.id === res.playerId
-                                  ).imageUrl
-                                    ? props.player.find(
-                                        (data) => data.id === res.playerId
-                                      ).imageUrl
-                                    : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlrNp5xmRAAnjGHuHgHWBjdBGwTWF2RFHnQQ&usqp=CAU"
-                                }
-                                alt="profile"
-                                className="cursor-pointer"
-                              />
-                              <div className="player">
-                                {
-                                  props.player.find(
-                                    (data) => data.id === res.playerId
-                                  ).displayName
-                                }
-                                {res.isOnStrike ? (
-                                  <FaBaseballBall
-                                    size={18}
-                                    color={"green"}
-                                    style={{ marginLeft: 10 }}
-                                  />
-                                ) : null}
-                                {res.isOut ? (
-                                  <p className="status-out">
-                                    {res.dismissalText}
-                                  </p>
-                                ) : res.isBatting ? (
-                                  <p>Not Out</p>
-                                ) : null}
-                              </div>
-                            </div>
-                            <div className="scored">
-                            {res.runsScored ? (
-                    res.isOut ? (
-                      <p className="runs font-bold">{res.runsScored}</p>
-                    ) : (
-                      <p className="runs font-bold">{res.runsScored}*</p>
-                    )
-                  ) : res.runsScored === 0 ? (
-                    res.isOut ? (
-                      <p className="runs font-extrabold">{res.runsScored}</p>
-                    ) : (
-                      <p className="runs font-extrabold">{res.runsScored}*</p>
-                    )
-                  ) : (
-                    <p className="runs font-semibold">-</p>
-                  )}
-                  <p className="runs font-semibold">
-                    {res.ballsFaced ? (
-                      res.ballsFaced
-                    ) : (
-                      <p className="runs font-semibold">-</p>
-                    )}
-                  </p>
-                  <p className="runs font-semibold">
-                    {res.foursScored || res.foursScored === 0 ? (
-                      res.foursScored
-                    ) : (
-                      <p className="runs font-semibold">-</p>
-                    )}
-                  </p>
-                  <p className="runs font-semibold">
-                    {res.sixesScored || res.sixesScored === 0 ? (
-                      res.sixesScored
-                    ) : (
-                      <p className="runs font-semibold">-</p>
-                    )}
-                  </p>
-                  <p className="runs font-semibold">
-                    {res.strikeRate || res.strikeRate === 0 ? (
-                      res.strikeRate
-                    ) : (
-                      <p className="runs font-semibold">-</p>
-                    )}
-                  </p>
+                    <div>
+                      {props.data.innings[team].batsmen.map((res, index) => (
+                        <div className="player-image">
+                          <div className="player-name">
+                            <img
+                              src={
+                                props.player.find(
+                                  (data) => data.id === res.playerId
+                                ).imageUrl
+                                  ? props.player.find(
+                                      (data) => data.id === res.playerId
+                                    ).imageUrl
+                                  : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlrNp5xmRAAnjGHuHgHWBjdBGwTWF2RFHnQQ&usqp=CAU"
+                              }
+                              alt="profile"
+                              className="cursor-pointer"
+                            />
+                            <div className="player">
+                              {
+                                props.player.find(
+                                  (data) => data.id === res.playerId
+                                ).displayName
+                              }
+                              {res.isOnStrike ? (
+                                <GiCricketBat
+                                  size={18}
+                                  color={"green"}
+                                  style={{ marginLeft: 10 }}
+                                />
+                              ) : null}
+                              {res.isOut ? (
+                                <p className="status-out">
+                                  {res.dismissalText}
+                                </p>
+                              ) : res.isBatting ? (
+                                <p>Not Out</p>
+                              ) : null}
                             </div>
                           </div>
-                        ))}
-                      </div>
+                          <div className="scored">
+                            {res.runsScored ? (
+                              res.isOut ? (
+                                <p className="runs font-bold">
+                                  {res.runsScored}
+                                </p>
+                              ) : (
+                                <p className="runs font-bold">
+                                  {res.runsScored}*
+                                </p>
+                              )
+                            ) : res.runsScored === 0 ? (
+                              res.isOut ? (
+                                <p className="runs font-extrabold">
+                                  {res.runsScored}
+                                </p>
+                              ) : (
+                                <p className="runs font-extrabold">
+                                  {res.runsScored}*
+                                </p>
+                              )
+                            ) : (
+                              <p className="runs font-semibold">-</p>
+                            )}
+                            <p className="runs font-semibold">
+                              {res.ballsFaced ? (
+                                res.ballsFaced
+                              ) : (
+                                <p className="runs font-semibold">-</p>
+                              )}
+                            </p>
+                            <p className="runs font-semibold">
+                              {res.foursScored || res.foursScored === 0 ? (
+                                res.foursScored
+                              ) : (
+                                <p className="runs font-semibold">-</p>
+                              )}
+                            </p>
+                            <p className="runs font-semibold">
+                              {res.sixesScored || res.sixesScored === 0 ? (
+                                res.sixesScored
+                              ) : (
+                                <p className="runs font-semibold">-</p>
+                              )}
+                            </p>
+                            <p className="runs font-semibold">
+                              {res.strikeRate || res.strikeRate === 0 ? (
+                                res.strikeRate
+                              ) : (
+                                <p className="runs font-semibold">-</p>
+                              )}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   )}
                 </div>
                 <div className="scored-section">
@@ -276,49 +285,57 @@ const MatchDetailsData = (props) => {
                             </div>
                           </div>
                           <div className="scored">
-                          {res.runsScored ? (
-                    res.isOut ? (
-                      <p className="runs font-bold">{res.runsScored}</p>
-                    ) : (
-                      <p className="runs font-bold">{res.runsScored}*</p>
-                    )
-                  ) : res.runsScored === 0 ? (
-                    res.isOut ? (
-                      <p className="runs font-extrabold">{res.runsScored}</p>
-                    ) : (
-                      <p className="runs font-extrabold">{res.runsScored}*</p>
-                    )
-                  ) : (
-                    <p className="runs font-semibold">-</p>
-                  )}
-                  <p className="runs font-semibold">
-                    {res.ballsFaced ? (
-                      res.ballsFaced
-                    ) : (
-                      <p className="runs font-semibold">-</p>
-                    )}
-                  </p>
-                  <p className="runs font-semibold">
-                    {res.foursScored || res.foursScored === 0 ? (
-                      res.foursScored
-                    ) : (
-                      <p className="runs font-semibold">-</p>
-                    )}
-                  </p>
-                  <p className="runs font-semibold">
-                    {res.sixesScored || res.sixesScored === 0 ? (
-                      res.sixesScored
-                    ) : (
-                      <p className="runs font-semibold">-</p>
-                    )}
-                  </p>
-                  <p className="runs font-semibold">
-                    {res.strikeRate || res.strikeRate === 0 ? (
-                      res.strikeRate
-                    ) : (
-                      <p className="runs font-semibold">-</p>
-                    )}
-                  </p>
+                            {res.runsScored ? (
+                              res.isOut ? (
+                                <p className="runs font-bold">
+                                  {res.runsScored}
+                                </p>
+                              ) : (
+                                <p className="runs font-bold">
+                                  {res.runsScored}*
+                                </p>
+                              )
+                            ) : res.runsScored === 0 ? (
+                              res.isOut ? (
+                                <p className="runs font-extrabold">
+                                  {res.runsScored}
+                                </p>
+                              ) : (
+                                <p className="runs font-extrabold">
+                                  {res.runsScored}*
+                                </p>
+                              )
+                            ) : (
+                              <p className="runs font-semibold">-</p>
+                            )}
+                            <p className="runs font-semibold">
+                              {res.ballsFaced ? (
+                                res.ballsFaced
+                              ) : (
+                                <p className="runs font-semibold">-</p>
+                              )}
+                            </p>
+                            <p className="runs font-semibold">
+                              {res.foursScored || res.foursScored === 0 ? (
+                                res.foursScored
+                              ) : (
+                                <p className="runs font-semibold">-</p>
+                              )}
+                            </p>
+                            <p className="runs font-semibold">
+                              {res.sixesScored || res.sixesScored === 0 ? (
+                                res.sixesScored
+                              ) : (
+                                <p className="runs font-semibold">-</p>
+                              )}
+                            </p>
+                            <p className="runs font-semibold">
+                              {res.strikeRate || res.strikeRate === 0 ? (
+                                res.strikeRate
+                              ) : (
+                                <p className="runs font-semibold">-</p>
+                              )}
+                            </p>
                           </div>
                         </div>
                       ))}
