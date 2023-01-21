@@ -3,7 +3,7 @@
   display: flex;
   // height: 1660px;
   .main-details {
-    background-color: #000;
+    background-color: grey;
     width: 50%;
     height: 100%;
     justify-content: space-between;
@@ -14,33 +14,124 @@
     border-left: 1px solid grey;
     // padding: 0 10px 0 10px;
     // color: pink;
-    .matchinfo-page{
+    .matchinfo-page {
       // background-color: red;
       width: 100%;
       padding: 30px;
-      .data-section{
-          // background-color: yellow;
-          flex-direction: row;
-          display: flex;
-          gap:50px;
-          margin-bottom: 40px;
-          color: #fff;
-          font-weight: 500;
-          font-size: 17px;
-          .match-option{
-            // background-color: red;
-            width: 120px;
-          }
-          .matchinfo-title{
-            font-size: 30px;
-          }
-          .matchinfo-data{
-            font-weight: 100;
-            color:aliceblue;
-          }
+      .data-section {
+        // background-color: yellow;
+        flex-direction: row;
+        display: flex;
+        gap: 50px;
+        margin-bottom: 40px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 17px;
+        .match-option {
+          // background-color: red;
+          width: 120px;
+        }
+        .matchinfo-title {
+          font-size: 30px;
+        }
+        .matchinfo-data {
+          font-weight: 100;
+          color: aliceblue;
+        }
       }
     }
-    .Player-page{
+    .Scorecard-page {
+      width: 100%;
+      .team-option {
+        padding: 10px;
+        .team-a {
+          //  background-color:pink;
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+        }
+        .team-b {
+          // background-color:red;
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+        }
+        .score-head {
+          flex-direction: row;
+          width: 100%;
+          margin-top: 15px;
+          display: flex;
+          justify-content: space-between;
+          background-color: pink;
+          align-items: center;
+          .score-header {
+            // background-color: green;
+            flex-direction: row;
+            display: flex;
+            width: 28%;
+            //  gap: 80px;
+            padding: 10px;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+      }
+      .scored-section {
+        // background-color: pink;
+        padding-top: 10px;
+        .player-image {
+        //  background-color: yellow;
+          flex-direction: row;
+          display: flex;
+          gap: 10px;
+          width: 100%;
+          .player-name {
+            width: 45%;
+            // padding: 10px;
+            // justify-content: space-between;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline;
+            // background-color:red;
+            display: flex;
+            align-items: center;
+            // text-align: end;
+            gap: 10px;
+            .player {
+              // background-color:pink;
+              gap: 20px;
+              .status-out {
+                //  background-color:green;
+                font-size: 14px;
+                color: beige;
+              }
+            }
+          }
+          .scored{
+          //  background-color:red;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            justify-content: space-between;
+            width: 67%;
+            .runs{
+              width: 20px;
+            }
+          }
+        }
+        .cursor-pointer {
+          height: 50px;
+          // width: 50px;
+          object-fit: contain;
+          // mix-blend-mode: multiply;
+          aspect-ratio: 2/2;
+          // background-color: green;
+        }
+      }
+    }
+    .Player-page {
       width: 100%;
       padding: 40px;
     }
@@ -67,14 +158,14 @@
   .MatchDetailsData {
     .main-details {
       width: 100%;
-      .matchinfo-page{
+      .matchinfo-page {
         padding: 15px;
-        .data-section{
+        .data-section {
           justify-content: space-between;
           // background-color: red;
           word-break: break-all;
           text-align: end;
-          .match-option{
+          .match-option {
             text-align: left;
           }
         }
