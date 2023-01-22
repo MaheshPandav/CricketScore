@@ -6,8 +6,12 @@ import Players from "../Components/Players/Players";
 import Commentry from "../Components/Commentry/Commentry";
 import { BsChevronDown } from "react-icons/bs";
 import { SlArrowUp } from "react-icons/sl";
-import { GiCricketBat } from "react-icons/gi";
-import { FaBaseballBall } from "react-icons/fa";
+// import { MdSportsCricket } from "react-icons/gi";
+import { IoIosTennisball } from "react-icons/io";
+import { MdSportsCricket } from "react-icons/md";
+// import { IoIosTennisball } from "react-icons/io";
+
+
 
 const MatchDetailsData = (props) => {
   const [team, setTeam] = useState(0);
@@ -69,7 +73,7 @@ const MatchDetailsData = (props) => {
                   className="team-a"
                   onClick={() => setOption(!option)}
                   style={{
-                    backgroundColor: option ? "pink" : "",
+                    backgroundColor: option ? "grey" : "",
                     borderRadius: 5,
                   }}
                 >
@@ -109,7 +113,7 @@ const MatchDetailsData = (props) => {
                   className="team-b"
                   onClick={() => setOptionb(!optionb)}
                   style={{
-                    backgroundColor: optionb ? "pink" : "",
+                    backgroundColor: optionb ? "grey" : "",
                     borderRadius: 5,
                   }}
                 >
@@ -150,7 +154,7 @@ const MatchDetailsData = (props) => {
                 </div>
                 <div className="score-head">
                   <div className="score-header">
-                    <GiCricketBat size={20} className="icon" />
+                    <MdSportsCricket size={20} className="icon" />
                     <h3 className="batting">Batting</h3>
                   </div>
                   <h3 className="data">R</h3>
@@ -185,7 +189,7 @@ const MatchDetailsData = (props) => {
                                 ).displayName
                               }
                               {res.isOnStrike ? (
-                                <GiCricketBat
+                                <MdSportsCricket
                                   size={18}
                                   color={"green"}
                                   style={{ marginLeft: 10 }}
@@ -196,7 +200,7 @@ const MatchDetailsData = (props) => {
                                   {res.dismissalText}
                                 </p>
                               ) : res.isBatting ? (
-                                <p>Not Out</p>
+                                <p className="status-out">Not Out</p>
                               ) : null}
                             </div>
                           </div>
@@ -308,7 +312,7 @@ const MatchDetailsData = (props) => {
                           </div>
                           <div className="score-head">
                             <div className="score-header">
-                              <FaBaseballBall size={20} className="icon" />
+                              <IoIosTennisball size={20} className="icon" />
                               <h3 className="batting">Bowling</h3>
                             </div>
                             <h3 className="data">O</h3>
@@ -341,7 +345,7 @@ const MatchDetailsData = (props) => {
                                       ).displayName
                                     }
                                     {res.isOnStrike ? (
-                                      <FaBaseballBall
+                                      <IoIosTennisball
                                         size={18}
                                         color={"green"}
                                         style={{ marginLeft: 10 }}
@@ -447,7 +451,7 @@ const MatchDetailsData = (props) => {
                                 ).displayName
                               }
                               {res.isOnStrike ? (
-                                <GiCricketBat
+                                <MdSportsCricket
                                   size={18}
                                   color={"green"}
                                   style={{ marginLeft: 10 }}
@@ -458,7 +462,7 @@ const MatchDetailsData = (props) => {
                                   {res.dismissalText}
                                 </p>
                               ) : res.isBatting ? (
-                                <p>Not Out</p>
+                                <p className="status-out">Not Out</p>
                               ) : null}
                             </div>
                           </div>
@@ -570,7 +574,7 @@ const MatchDetailsData = (props) => {
                       </div>
                       <div className="score-head">
                         <div className="score-header">
-                          <FaBaseballBall size={20} className="icon" />
+                          <IoIosTennisball size={20} className="icon" />
                           <h3 className="batting">Bowling</h3>
                         </div>
                         <h3 className="data">O</h3>
@@ -602,7 +606,7 @@ const MatchDetailsData = (props) => {
                                 ).displayName
                               }
                               {res.isOnStrike ? (
-                                <FaBaseballBall
+                                <IoIosTennisball
                                   size={18}
                                   color={"green"}
                                   style={{ marginLeft: 10 }}
