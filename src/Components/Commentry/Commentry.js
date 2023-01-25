@@ -2,7 +2,10 @@ import React from 'react'
 import '../Commentry/Commentry.scss'
 
 const Commentry = (props) => {
-    // console.log(props) 
+
+  const time = new Date().toLocaleTimeString()
+    console.log(props) 
+    // console.log(time)
   return (
     <div>
         {props.Commentry.map((item,index)=>{
@@ -63,7 +66,10 @@ const Commentry = (props) => {
                     </div>
                       <div className='message'> 
                       {balls.comments[0].commentTypeId != "EndOfOver" ? (
+                        <div>
                         <p style={{color:'#fff'}}>{balls.comments[0].message}</p>
+                        <p className='ball-time'>{new Date(balls.ballDateTime).toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' })}</p>
+                        </div>
                       ) : (
                         <p style={{color:'#fff'}}>{balls.comments[1].message}</p>
                       )}

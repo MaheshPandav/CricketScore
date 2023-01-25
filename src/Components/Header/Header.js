@@ -2,20 +2,20 @@ import React, { useState } from "react";
 import "../Header/Header.scss";
 import { BsSearch } from "react-icons/bs";
 import { AiOutlineAlignLeft } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menu, setMemu] = useState(false);
   return (
     <div className="Main">
       <div className="header">
-        <a href="/">
+        <Link to="/">
           <img
-            onClick={() => window.location.reload()}
             className="image"
             src="https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/cricket-logo-maker/All-Star-Cricket-Team-Logo-Maker-for-Cricket-Teams.png"
             alt="new"
           />
-        </a>
+        </Link>
         <div className="middle-content">
           <ul className="middle-option">
             <p className="item-text">Live Scores</p>

@@ -10,6 +10,7 @@ import { SlArrowUp } from "react-icons/sl";
 import { IoIosTennisball } from "react-icons/io";
 import { MdSportsCricket } from "react-icons/md";
 // import { IoIosTennisball } from "react-icons/io";
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 
 
@@ -64,6 +65,14 @@ const MatchDetailsData = (props) => {
                   : "🕒 Feautured"}
               </p>
             </div>
+            <Player
+  autoplay
+  loop
+  src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
+  style={{ height: '150px', width: '160px' }}
+>
+  {/* <Controls visible={true} buttons={['play', 'repeat', 'frame', 'debug']} /> */}
+</Player>
           </div>
         ) : props.tab === "Scorecard" ? (
           props.data.isLive || props.data.isCompleted ? (

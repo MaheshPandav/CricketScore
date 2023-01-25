@@ -5,7 +5,6 @@ import MatchDetails from './Screens/MatchDetails'
 
 function App() {
   return (
-    <BrowserRouter>
     <Routes>
       <Route 
       path="/" element={<Home />}>
@@ -14,7 +13,6 @@ function App() {
       path="/matchdetails/:id" element={<MatchDetails />}>
       </Route>
     </Routes>
-  </BrowserRouter>
   );
 }
 
