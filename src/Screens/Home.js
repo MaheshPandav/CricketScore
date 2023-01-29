@@ -3,8 +3,12 @@ import "../Screens/Home.scss";
 import Slider from "../Components/Slider/Slider";
 import axios from "axios";
 import { API_URL, News_API_URL } from "../Api.js";
+import { googleAnalyticsAction } from "../utils/google-analystic/google-analutics-init";
 
 const Home = () => {
+  useEffect(() => {
+    googleAnalyticsAction.initGoogleAnalytics("UA-255533035-1");
+  });
   const [match, setMatch] = useState([]);
   const [filter, setFilter] = useState(match);
   const [isLoading, setisLoading] = useState(true);
