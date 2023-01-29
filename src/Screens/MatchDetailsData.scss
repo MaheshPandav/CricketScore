@@ -1,25 +1,19 @@
 .MatchDetailsData {
   justify-content: center;
   display: flex;
-  // height: 1660px;
   .main-details {
     background-color: #000;
     width: 50%;
     height: 100%;
     justify-content: space-between;
     display: flex;
-    // border-top: 1px solid grey;
     border-left: 1px solid grey;
     border-right: 1px solid grey;
     border-left: 1px solid grey;
-    // padding: 0 10px 0 10px;
-    // color: pink;
     .matchinfo-page {
-      // background-color: red;
       width: 100%;
       padding: 30px;
       .data-section {
-        // background-color: yellow;
         flex-direction: row;
         display: flex;
         gap: 50px;
@@ -28,7 +22,6 @@
         font-weight: 500;
         font-size: 17px;
         .match-option {
-          // background-color: red;
           width: 120px;
         }
         .matchinfo-title {
@@ -45,7 +38,6 @@
       .team-option {
         padding: 10px;
         .team-a {
-          //  background-color:pink;
           padding: 10px;
           display: flex;
           justify-content: space-between;
@@ -54,7 +46,6 @@
           color: #fff;
         }
         .team-b {
-          // background-color:red;
           padding: 10px;
           display: flex;
           justify-content: space-between;
@@ -71,11 +62,9 @@
           align-items: center;
           color: white;
           .score-header {
-            // background-color: green;
             flex-direction: row;
             display: flex;
             width: 26%;
-            //  gap: 80px;
             padding: 10px;
             align-items: center;
             justify-content: space-between;
@@ -84,35 +73,26 @@
         }
       }
       .scored-section {
-        // background-color: pink;
         padding-top: 10px;
         .player-image {
-          // background-color: yellow;
           flex-direction: row;
           display: flex;
-          // gap: 10px;
           width: 100%;
           align-items: center;
           padding-top: 10px;
           color: white;
           .player-name {
             width: 45%;
-            // padding: 10px;
-            // justify-content: space-between;
             overflow: hidden;
             text-overflow: ellipsis;
             display: inline;
-            // background-color:red;
             display: flex;
             align-items: center;
-            // text-align: end;
             color: white;
             gap: 10px;
             .player {
-              // background-color:pink;
               gap: 20px;
               .status-out {
-                //  background-color:green;
                 font-size: 14px;
                 color: grey;
                 margin-top: 5px;
@@ -120,7 +100,6 @@
             }
           }
           .scored{
-          //  background-color:red;
             display: flex;
             flex-direction: row;
             overflow: hidden;
@@ -135,21 +114,17 @@
         .line{
           height:1px;
           width: 100%;
-          // border: 1px solid 'red';
           margin-top: 10px;
           opacity: 0.4;
           background-color: #000
         }
         .score-info{
-          // background-color: green;
           margin-top:25px;
           .run-score{
             color: white;
-            // background-color:red;
             padding-top:10px;
           }
           .fall-wickets{
-            // background-color:yellow;
             display:flex;
             align-items:center;
             margin-top: 10px;
@@ -168,11 +143,8 @@
         }
         .cursor-pointer {
           height: 50px;
-          // width: 50px;
           object-fit: contain;
-          // mix-blend-mode: multiply;
           aspect-ratio: 2/2;
-          // background-color: green;
         }
       }
     }

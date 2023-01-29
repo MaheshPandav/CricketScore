@@ -45,6 +45,7 @@ const MatchDetails = () => {
   return (
     <div className="matchdetails">
       <div className="match-header-details">
+        <div className="first">.</div>
         {!isLoading ? (
           !data.length > 0 ? (
             <div className="match-data">
@@ -218,6 +219,9 @@ const MatchDetails = () => {
             <Lottie animationData={groovyWalkAnimation} loop={true} />
           </div>
         )}
+         <div className="first">
+          <p>.</p>
+         </div>
       </div>
       {/* <div
         style={{ height: 0.7, width: "100%", backgroundColor: "#fff" }}
@@ -230,16 +234,28 @@ const MatchDetails = () => {
         }}
       >
         <div className="options">
-          <div className={tab === "MatchInfo" ? "MatchInfo-select" : 'MatchInfo'} onClick={() => setTab("MatchInfo")}>
+          <div
+            className={tab === "MatchInfo" ? "MatchInfo-select" : "MatchInfo"}
+            onClick={() => setTab("MatchInfo")}
+          >
             <p>MatchInfo</p>
           </div>
-          <div className={tab === "Scorecard" ? "Scorecard-select" : 'Scorecard'} onClick={() => setTab("Scorecard")}>
+          <div
+            className={tab === "Scorecard" ? "Scorecard-select" : "Scorecard"}
+            onClick={() => setTab("Scorecard")}
+          >
             <p>Scorecard</p>
           </div>
-          <div className={tab === "Commentry" ? "Commentry-select" : 'Commentry'} onClick={() => setTab("Commentry")}>
+          <div
+            className={tab === "Commentry" ? "Commentry-select" : "Commentry"}
+            onClick={() => setTab("Commentry")}
+          >
             <p>Commentry</p>
           </div>
-          <div className={tab === "Player" ? "Player-select" : 'Player'} onClick={() => setTab("Player")}>
+          <div
+            className={tab === "Player" ? "Player-select" : "Player"}
+            onClick={() => setTab("Player")}
+          >
             <p>Player</p>
           </div>
         </div>
